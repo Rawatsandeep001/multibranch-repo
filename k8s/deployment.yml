@@ -3,10 +3,10 @@ kind: Deployment
 metadata:
   name: movie-app
   namespace: default
-space:
-  replocas: 5
-  selector: 
-    metchlabels:
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
       app: movie-app
   template:
     metadata:
@@ -15,8 +15,6 @@ space:
     spec:
       containers:
         - name: movie-app
-          image: sandeeprawat001/multibrach-flask-app"
+          image: sandeeprawat001/multibrach-flask-app
           ports:
             - containerPort: 5000
-
-
