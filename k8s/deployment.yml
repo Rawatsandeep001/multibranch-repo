@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: movie-app
+  namespace: default
+space:
+  replocas: 5
+  selector: 
+    metchlabels:
+      app: movie-app
+  template:
+    metadata:
+      labels:
+        app: movie-app
+    spec:
+      containers:
+        - name: movie-app
+          image: sandeeprawat001/multibrach-flask-app"
+          ports:
+            - containerPort: 5000
+
+
